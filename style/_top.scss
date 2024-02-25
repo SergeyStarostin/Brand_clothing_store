@@ -114,7 +114,7 @@
     }
   }
   
-  .items {
+  .top_items {
     background: $colorBackgroundSecond;
     display: flex;
     flex-direction: column;
@@ -135,11 +135,10 @@
       margin-bottom: 48px;
     }
   
-    &__content {
+    .items_content {
       display: grid;
       grid-template-columns: repeat(3, 360px);
       gap: 30px;
-      margin-bottom: 48px;
   
       .item {
         background-color: #f8f8f8;
@@ -194,9 +193,9 @@
             z-index: 9;
           }
         }
-  
         &__description {
           padding-left: 16px;
+          padding-right: 16px;
   
           .item__title {
             color: $colorTitleText;
@@ -223,7 +222,7 @@
       }
     }
   
-    .more {
+    .productButton {
       color: $colorSelectSite;
       border: 1px solid $colorSelectSite;
       padding-top: 15px;
@@ -233,9 +232,10 @@
       padding-right: 39px;
       background-color: inherit;
       transition: all 0.3s;
+      margin-top: 48px;
     }
   
-    .more:hover {
+    .productButton:hover {
       background-color: $colorSelectSite;
       color: $colorBackgroundSecond;
     }
