@@ -1,4 +1,3 @@
-
 @import 'vars';
 @import 'header';
 @import 'top';
@@ -6,6 +5,7 @@
 @import 'footer';
 @import 'product';
 @import 'catalog';
+@import 'cart';
 
 * {
   margin: 0;
@@ -55,7 +55,7 @@ summary::-webkit-details-marker {
   overflow: hidden;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1150px) {
 
   .center {
     padding-left: calc(50% - 384px);
@@ -272,6 +272,56 @@ summary::-webkit-details-marker {
       }
     }
   }
+
+  // Cart pad size
+  .cart {
+    flex-direction: column;
+    gap: 64px;
+    padding-top: 60px;
+    padding-bottom: 128px;
+    padding-left: 16px;
+    padding-right: 16px;
+    align-items: center;
+    &__goods {
+      gap: 62px;
+      &__items {
+        align-items: center;
+        &__card-box {
+          align-content: flex-end;
+          flex-direction: row;
+          position: relative;
+          &__closure {
+            margin-left: 90px;
+          }
+        }
+        &__card-item {
+          width: 734px;
+        }
+      }
+      &__controls {
+        gap: 48px;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+    &__order {
+      flex-direction: row;
+      gap: 15px;
+      width: 734px;
+      &__recepient {
+        padding-top: 0px;
+        &__form {
+
+          .input_item {
+            width: 360px;
+          }
+        }
+      }
+      &__execute {
+        margin-top: 39px;
+      }
+    }
+  }
 }
 
 @media (max-width: 767px) {
@@ -466,16 +516,16 @@ summary::-webkit-details-marker {
       }
     }
 
-  .contacts {
-    padding-top: 51px;
-    padding-bottom: 24px;
-    display: flex;
-    flex-direction: column-reverse;
-    gap: 25px;
-    justify-content: center;
-    align-items: center;
-    background-color: $colorBackgroundFirst;
-  }
+    .contacts {
+      padding-top: 51px;
+      padding-bottom: 24px;
+      display: flex;
+      flex-direction: column-reverse;
+      gap: 25px;
+      justify-content: center;
+      align-items: center;
+      background-color: $colorBackgroundFirst;
+    }
   }
 
   // Product phone size
@@ -543,8 +593,7 @@ summary::-webkit-details-marker {
     }
   }
 
-  // Catalog page
-
+  // Catalog phone size
   .catalog {
     
     .filter-sort {
@@ -554,7 +603,6 @@ summary::-webkit-details-marker {
         top: 26px;
         padding-left: 8px;
         padding-right: 8px;
-        /*z-index: 15;*/
         &__heading {
           display: none;
         }
@@ -591,6 +639,109 @@ summary::-webkit-details-marker {
         padding-left: 8px;
         padding-right: 8px;
       } 
+    }
+  }
+
+  // Cart phone size
+  .top-head {
+    padding: 50px 90px 69px;
+  }
+
+  .cart {
+    flex-direction: column;
+    gap: 48px;
+    padding-top: 39px;
+    padding-bottom: 96px;
+    padding-left: 7px;
+    padding-right: 7px;
+    align-items: center;
+    &__goods {
+      gap: 30px;
+      &__items {
+        align-items: center;
+        gap: 32px;
+        &__card-box {
+          align-content: flex-end;
+          flex-direction: row;
+          position: relative;
+          &__closure {
+            margin-left: 20px;
+            margin-top: 14px;
+          }
+        }
+        .close {
+          width: 10px;
+          height: 11px;
+        }
+        &__card-item {
+          width: 358px;
+          height: 188px;
+          &__img {
+            height: 188px;
+          }
+          &__info {
+            width: 214px;
+            padding-left: 17px;
+            padding-top: 14px;
+            padding-bottom: 38px;
+            padding-right: 0px;
+            margin-right: -56px;
+            gap: 26px;
+
+            .info_heading {
+              font-size: 16px;
+              width: 200px;
+            }
+            .info_content {
+              gap: 3px;
+              &__card-item {
+                &__name {
+                  font-size: 14px;
+                }
+                &__price {
+                  font-size: 14px;
+                }
+                &__value {
+                  font-size: 14px;
+                }
+                &__quantity {
+                  width: 24px;
+                  font-size: 10px;
+                  padding-left: 6px;
+                  padding-right: 4px;
+                  padding-top: 1px;
+                  padding-bottom: 1px;
+                }
+              } 
+            }  
+          }
+        }
+      }
+      &__controls {
+        gap: 9px;
+        justify-content: space-between;
+        &__button {
+          font-size: 12px;
+          padding: 9px 18px;
+          box-sizing: border-box;
+          text-align: center;
+        }
+      }
+    }
+    &__order {
+      gap: 48px;
+      width: 360px;
+      flex-direction:column;
+      &__recepient {
+        &__form {
+          .input_item {
+            width: 360px;
+          }
+        }
+      }
+      &__execute {
+        margin-top: 0px;
+      }
     }
   }
 }

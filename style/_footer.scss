@@ -36,7 +36,6 @@
     height: 100%;
     &::after {
       content: '';
-      background: rgba(244, 244, 244, 0.70);
       display: block;
       position: absolute;
       width: 100%;
@@ -49,7 +48,7 @@
     .subscription {
       background-image: url("../img/footer/basement_background.svg");
       background-size: cover;
-      background-color: rgba(244, 244, 244, 0.70);
+      background-color: rgba(236, 226, 226, 0.7);
       padding-top: 97px;
       padding-bottom: 126px;
       display: grid;
@@ -101,6 +100,7 @@
     
         .subscription__form {
           position: relative;
+
           .subscription__email {
             box-sizing: border-box;
             width: 356px;
