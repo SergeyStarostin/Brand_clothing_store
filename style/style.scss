@@ -6,6 +6,7 @@
 @import 'product';
 @import 'catalog';
 @import 'cart';
+@import 'registration';
 
 * {
   margin: 0;
@@ -322,6 +323,28 @@ summary::-webkit-details-marker {
       }
     }
   }
+  // Registration pad size
+
+  .registration {
+    gap: 22px;
+    padding-top: 40px;
+    padding-bottom: 96px;
+    margin-left: 16px;
+    margin-right: 16px;
+    
+    .loyality {
+      width: 354px;
+      &__header {
+        font-size: 16px;
+      }
+      &__text {
+        font-size: 16px;
+      }
+      &__ul {
+        font-size: 16px;
+      }
+    }
+  }  
 }
 
 @media (max-width: 767px) {
@@ -744,4 +767,25 @@ summary::-webkit-details-marker {
       }
     }
   }
+
+  // registration phone size
+  
+  .registration {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding-top: 40px;
+    padding-bottom: 100px;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-left: 0px;
+    margin-right: 0px;
+    
+    .loyality {
+      width: 358px;
+      &__header {
+        font-size: 16px;
+      }
+    }
+  }  
 }
