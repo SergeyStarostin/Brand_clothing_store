@@ -70,30 +70,26 @@ summary::-webkit-details-marker {
   }
 
   .top {
-    gap: 39px;
+    gap: 40px;
 
     .main__picture {
-      width: 386px;
-      height: 368px;
-      margin-left: -112px;
-      margin-top: 15px;
+      max-width: 100%;
+      height: 367px;
+      margin-left: 0px;
     }
 
     .custom__header {
       margin-top: 138px;
-      margin-bottom: 151px;
+      margin-bottom: 138px;
 
       .top__content {
+        
         .top__title {
           font-size: 44px;
         }
 
         .top__subtitle {
           font-size: 24px;
-
-          .highlighting {
-            font-size: 24px;
-          }
         }
       }
     }
@@ -101,7 +97,7 @@ summary::-webkit-details-marker {
 
   .categories {
     grid-template-columns: repeat(3, 232px);
-    gap: 19.9px;
+    gap: 20px;
     padding-top: 65px;
     padding-bottom: 109px;
 
@@ -143,7 +139,7 @@ summary::-webkit-details-marker {
     }
 
     .accesories_category {
-      width: 734.6px;
+      width: 734px;
       height: 116px;
     }
   }
@@ -240,7 +236,7 @@ summary::-webkit-details-marker {
     }
   }
 
-  // catalog pad size
+  // Catalog pad size
   .catalog {
 
     .filter-sort {
@@ -323,28 +319,28 @@ summary::-webkit-details-marker {
       }
     }
   }
-  // Registration pad size
 
+  // Registration pad size
   .registration {
     gap: 22px;
     padding-top: 40px;
-    padding-bottom: 96px;
     margin-left: 16px;
     margin-right: 16px;
     
-    .loyality {
-      width: 354px;
+    .loyalty {
       &__header {
         font-size: 16px;
       }
       &__text {
         font-size: 16px;
+        margin-bottom: 31px;
       }
       &__ul {
         font-size: 16px;
+        gap: 16px;
       }
     }
-  }  
+  }
 }
 
 @media (max-width: 767px) {
@@ -381,7 +377,15 @@ summary::-webkit-details-marker {
     }
   }
 
+  // Top-header phone size
+  .top-head {
+    flex-direction: column;
+    gap: 32px;
+    justify-content: center;
+  }
+
   .top {
+    
     .main__picture {
       display: none;
     }
@@ -398,6 +402,7 @@ summary::-webkit-details-marker {
       }
 
       .top__content {
+        
         .top__title {
           font-size: 38px;
         }
@@ -422,6 +427,7 @@ summary::-webkit-details-marker {
     margin-right: 16px;
 
     .category__card {
+      
       .card__content {
         padding-top: 98px;
         padding-bottom: 99px;
@@ -460,11 +466,9 @@ summary::-webkit-details-marker {
     padding-bottom: 85px;
     margin-left: 16px;
     margin-right: 16px;
-
     &__title {
       margin-bottom: 3px;
     }
-
     &__text {
       margin-bottom: 65px;
     }
@@ -491,6 +495,7 @@ summary::-webkit-details-marker {
   }
 
   .footer {
+    
     .advantages {
       padding-top: 48px;
       padding-bottom: 81px;
@@ -499,13 +504,14 @@ summary::-webkit-details-marker {
     }
 
     .subscription__wrap {
+      
       .subscription {
         padding-top: 64px;
         padding-bottom: 110px;
         gap: 59px;
         grid-template-columns: repeat(1, 343px);
-  
         &__quote {
+          
           .subscription__text {
             font-size: 18px;
           }
@@ -514,8 +520,8 @@ summary::-webkit-details-marker {
             font-size: 18px;
           }
         }
-  
         &__content {
+          
           .subscription__title {
             font-size: 24px;
           }
@@ -525,6 +531,7 @@ summary::-webkit-details-marker {
           }
   
           .subscription__form {
+            
             .subscription__email {
               width: 243px;
               height: 47px;
@@ -552,15 +559,6 @@ summary::-webkit-details-marker {
   }
 
   // Product phone size
-  .top-head {
-    padding-top: 24px;
-    padding-bottom: 46px;
-    gap: 32px;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
   .product {
     &__slider { 
       &__description {
@@ -577,7 +575,6 @@ summary::-webkit-details-marker {
     &__subtitle {
       margin-bottom: 32px;
     }
-  
     &__text {
       margin-bottom: 32px;
     }
@@ -644,6 +641,7 @@ summary::-webkit-details-marker {
         gap: 24px;
         
         .sort__details {
+          
           .sort__summary {
             gap: 9px;
             &__heading {
@@ -655,6 +653,7 @@ summary::-webkit-details-marker {
     }
 
     .catalog_items {
+      
       .items_content {
         display: grid;
         grid-template-columns: repeat(1, 360px);
@@ -666,10 +665,6 @@ summary::-webkit-details-marker {
   }
 
   // Cart phone size
-  .top-head {
-    padding: 50px 90px 69px;
-  }
-
   .cart {
     flex-direction: column;
     gap: 48px;
@@ -692,6 +687,7 @@ summary::-webkit-details-marker {
             margin-top: 14px;
           }
         }
+        
         .close {
           width: 10px;
           height: 11px;
@@ -715,6 +711,7 @@ summary::-webkit-details-marker {
               font-size: 16px;
               width: 200px;
             }
+            
             .info_content {
               gap: 3px;
               &__card-item {
@@ -742,12 +739,12 @@ summary::-webkit-details-marker {
       }
       &__controls {
         gap: 9px;
-        justify-content: space-between;
         &__button {
           font-size: 12px;
-          padding: 9px 18px;
-          box-sizing: border-box;
-          text-align: center;
+          font-size: 12px;
+          font-weight: 400;
+          height: 33px;
+          width: 175px;
         }
       }
     }
@@ -757,6 +754,7 @@ summary::-webkit-details-marker {
       flex-direction:column;
       &__recepient {
         &__form {
+          
           .input_item {
             width: 360px;
           }
@@ -769,23 +767,10 @@ summary::-webkit-details-marker {
   }
 
   // registration phone size
-  
   .registration {
     flex-direction: column;
     align-items: center;
-    gap: 40px;
-    padding-top: 40px;
-    padding-bottom: 100px;
-    padding-left: 8px;
+    padding-left: 9px;
     padding-right: 8px;
-    margin-left: 0px;
-    margin-right: 0px;
-    
-    .loyality {
-      width: 358px;
-      &__header {
-        font-size: 16px;
-      }
-    }
-  }  
+  }
 }

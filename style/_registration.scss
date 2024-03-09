@@ -3,7 +3,7 @@
   flex-direction: row;
   gap: 128px;
   padding-top: 64px;
-  padding-bottom: 94px;
+  padding-bottom: 96px;
 
   .registration-block {
     display: flex;
@@ -37,6 +37,7 @@
           }
         }
       }
+
       .reg-input-block-radio {
         display: flex;
         flex-direction: row;
@@ -106,31 +107,34 @@
         font-weight: 400;
       }
     }
+
     .registration-button:hover {
       background-color: $colorSelectSite;
       border-color: $colorSelectSite;
     }
+
     .registration-button:hover > .registration-button__text {
       color: $colorBackgroundSecond;
     }
+
     .registration-button__image:hover > svg path {
       stroke: $colorBackgroundSecond;
       fill: $colorBackgroundSecond;
     }
   }
+
   .loyalty {
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
-
     &__header {
-      margin-bottom: 22px;
       color: $colorTitleText;
       font-size: 24px;
       font-weight: 300;
     }
     &__text {
       margin-bottom: 21px;
+      padding-top: 22px;
       color: $colorTitleText;
       font-size: 24px;
       font-weight: 300;
