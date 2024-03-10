@@ -1,12 +1,12 @@
-@import 'vars';
-@import 'header';
-@import 'top';
-@import 'top-header';
-@import 'footer';
-@import 'product';
-@import 'catalog';
-@import 'cart';
-@import 'registration';
+@import "vars";
+@import "header";
+@import "top";
+@import "top-header";
+@import "footer";
+@import "product";
+@import "catalog";
+@import "cart";
+@import "registration";
 
 * {
   margin: 0;
@@ -57,7 +57,6 @@ summary::-webkit-details-marker {
 }
 
 @media (max-width: 1150px) {
-
   .center {
     padding-left: calc(50% - 384px);
     padding-right: calc(50% - 384px);
@@ -83,7 +82,6 @@ summary::-webkit-details-marker {
       margin-bottom: 138px;
 
       .top__content {
-        
         .top__title {
           font-size: 44px;
         }
@@ -229,7 +227,7 @@ summary::-webkit-details-marker {
   .product_items {
     margin-left: 16px;
     margin-right: 16px;
-  
+
     .items_content {
       grid-template-columns: repeat(2, 360px);
       gap: 16px;
@@ -238,22 +236,23 @@ summary::-webkit-details-marker {
 
   // Catalog pad size
   .catalog {
+    padding-bottom: 63px;
 
     .filter-sort {
-      height: 81px;
+      padding-top: 24px;
+      padding-bottom: 40px;
 
       .filter {
-        top: 24px;
-        padding: 0;
         padding-left: 16px;
+        &[open] {
+          margin-left: 8px;
+        }
       }
 
       .sort {
-        top: 24px;
-        left: 456px;
-        right: -100px;
-        padding: 0;
-        padding-right: 16px;
+        display: flex;
+        justify-content: flex-end;
+        right: 16px;
       }
     }
 
@@ -308,7 +307,6 @@ summary::-webkit-details-marker {
       &__recepient {
         padding-top: 0px;
         &__form {
-
           .input_item {
             width: 360px;
           }
@@ -326,7 +324,7 @@ summary::-webkit-details-marker {
     padding-top: 40px;
     margin-left: 16px;
     margin-right: 16px;
-    
+
     .loyalty {
       &__header {
         font-size: 16px;
@@ -385,7 +383,6 @@ summary::-webkit-details-marker {
   }
 
   .top {
-    
     .main__picture {
       display: none;
     }
@@ -402,7 +399,6 @@ summary::-webkit-details-marker {
       }
 
       .top__content {
-        
         .top__title {
           font-size: 38px;
         }
@@ -427,7 +423,6 @@ summary::-webkit-details-marker {
     margin-right: 16px;
 
     .category__card {
-      
       .card__content {
         padding-top: 98px;
         padding-bottom: 99px;
@@ -495,7 +490,6 @@ summary::-webkit-details-marker {
   }
 
   .footer {
-    
     .advantages {
       padding-top: 48px;
       padding-bottom: 81px;
@@ -504,39 +498,35 @@ summary::-webkit-details-marker {
     }
 
     .subscription__wrap {
-      
       .subscription {
         padding-top: 64px;
         padding-bottom: 110px;
         gap: 59px;
         grid-template-columns: repeat(1, 343px);
         &__quote {
-          
           .subscription__text {
             font-size: 18px;
           }
-  
+
           .subscription__text__italic {
             font-size: 18px;
           }
         }
         &__content {
-          
           .subscription__title {
             font-size: 24px;
           }
-  
+
           .subscription__subtitle {
             font-size: 14px;
           }
-  
+
           .subscription__form {
-            
             .subscription__email {
               width: 243px;
               height: 47px;
             }
-  
+
             .subscription__button {
               width: 96px;
               height: 47px;
@@ -559,19 +549,18 @@ summary::-webkit-details-marker {
   }
 
   // Product phone size
-  .product {
-    &__slider { 
-      &__description {
-        padding: 0;
-        &__wrapper {
-          padding-left: 24px;
-          padding-right: 24px;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          box-sizing: border-box;
-        }
-      } 
+  .product__slider {
+    &__description {
+      padding: 0;
+      &__wrapper {
+        padding-left: 24px;
+        padding-right: 24px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-sizing: border-box;
+      }
+    }
     &__subtitle {
       margin-bottom: 32px;
     }
@@ -584,20 +573,19 @@ summary::-webkit-details-marker {
     &__secondline {
       width: 175px;
       margin-bottom: 49px;
-    }
+    } 
   }
-
-    .selection-params {
-      margin-bottom: 64px;
-      &__details {
-        &__summary {
-          font-size: 10px;         
-        }
-        &__wrapper {
-          font-size: 10px;  
-        }
+  
+  .selection-params {
+    margin-bottom: 64px;
+    &__details {
+      &__summary {
+        font-size: 10px;
       }
-    }  
+      &__wrapper {
+        font-size: 10px;
+      }
+    }
   }
 
   .product_items {
@@ -615,31 +603,35 @@ summary::-webkit-details-marker {
 
   // Catalog phone size
   .catalog {
-    
+    padding-bottom: 64px;
+
     .filter-sort {
-      height: 80px;
+      font-size: 12px;
 
       .filter {
-        top: 26px;
+        position: absolute;
+        top: 24px;
         padding-left: 8px;
         padding-right: 8px;
+        padding-bottom: 16px;
+        width: 50px;
+        &[open] {
+          width: 360px;
+        }
         &__heading {
           display: none;
         }
-        &__summary>svg {
+        &__summary > svg {
           width: 37px;
           height: 25px;
         }
       }
 
       .sort {
-        top: 26px;
-        left: 100px;
-        right: -100px;
-        padding: 0;
-        padding-right: 8px;
+        top: 24px;
+        left: 80px;
         gap: 24px;
-        
+
         .sort__details {
           
           .sort__summary {
@@ -648,19 +640,24 @@ summary::-webkit-details-marker {
               font-size: 12px;
             }
           }
+
+          .sort__content {
+            &__item {
+              font-size: 12px;
+            }
+          }
         }
       }
     }
 
     .catalog_items {
-      
       .items_content {
         display: grid;
         grid-template-columns: repeat(1, 360px);
         gap: 16px;
         padding-left: 8px;
         padding-right: 8px;
-      } 
+      }
     }
   }
 
@@ -687,7 +684,7 @@ summary::-webkit-details-marker {
             margin-top: 14px;
           }
         }
-        
+
         .close {
           width: 10px;
           height: 11px;
@@ -711,7 +708,7 @@ summary::-webkit-details-marker {
               font-size: 16px;
               width: 200px;
             }
-            
+
             .info_content {
               gap: 3px;
               &__card-item {
@@ -732,8 +729,8 @@ summary::-webkit-details-marker {
                   padding-top: 1px;
                   padding-bottom: 1px;
                 }
-              } 
-            }  
+              }
+            }
           }
         }
       }
@@ -751,10 +748,9 @@ summary::-webkit-details-marker {
     &__order {
       gap: 48px;
       width: 360px;
-      flex-direction:column;
+      flex-direction: column;
       &__recepient {
         &__form {
-          
           .input_item {
             width: 360px;
           }
